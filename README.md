@@ -3,7 +3,7 @@
 Dynamically loading external JavaScript and CSS files 
 
 ##How use?
-Create `html` page with `js` and `css` connected.
+Create `html` page with `js` connected.
 
 ```html
 <script src="load.min.js"></script>
