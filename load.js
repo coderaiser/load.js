@@ -35,7 +35,12 @@
                 el      = document.createElement('script');
                 el.id   = id;
                 el.src  = src;
-                el.addEventListener('load', callback);
+                
+                el.addEventListener('load', function(event) {
+                    callback(null, event);
+                });
+                
+                el.addEventListener('error', callback);
             
                 document.body.appendChild(el);
             }
@@ -54,7 +59,12 @@
                 el.id   = getIdBySrc(src);
                 el.rel  = 'stylesheet';
                 el.href = src;
-                el.addEventListener('load', callback);
+                
+                el.addEventListener('load', function(event) {
+                    callback(null, event);
+                });
+                
+                el.addEventListener('error', callback);
                 
                 document.head.appendChild(el);
             }
