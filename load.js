@@ -19,6 +19,9 @@
             case '.json':
                 load.json(src, callback);
                 break;
+            
+            default:
+                load.ajax(src, callback);
             }
         }
         
@@ -59,7 +62,7 @@
             return el;
         };
         
-        load.json   = function(url, callback) {
+        load.ajax   = function(url, callback) {
             var request = new XMLHttpRequest();
             
             request.open('GET', url, true);
@@ -68,7 +71,7 @@
                 var data;
                 
                 if (request.status >= 200 && request.status < 400){
-                    data = JSON.parse(request.responseText);
+                    data = request.responseText;
                     callback(null, data);
                 }
             });
@@ -76,6 +79,17 @@
             request.addEventListener('error', callback);
             
             request.send();
+        };
+        
+        load.json   = function(url ,callback) {
+            load.ajax(url, function(error, data) {
+                var json;
+                
+                if (!error)
+                    json = JSON.parse(data);
+                
+                callback(error, json || data);
+            });
         };
         
         load.series = function(urls, callback) {
