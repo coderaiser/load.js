@@ -23,8 +23,16 @@ load('css-or-.js', function() {
     console.log('done');
 });
 
-load.json('config.json', function(config) {
-    console.log(config);
+load('template/footer.html', function(error, footer) {
+    console.log(error || footer);
+});
+
+load.json('config.json', function(error, config) {
+    console.log(error || config);
+});
+
+load.ajax('template/header.html', function(error, header) {
+    console.log(error || header);
 });
 
 /* load one-by-one */
@@ -39,7 +47,6 @@ load.parallel([
     'menu.css',
     'menu.js',
 ], function() {
-    
 });
 ```
 
