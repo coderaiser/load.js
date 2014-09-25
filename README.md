@@ -10,17 +10,17 @@ Create `html` page with `js` connected.
 ```
 
 ```js
-load.js('jquery.js', function() {
+load.js('jquery.js', function(error) {
     /* you could use jquery functions here */
 });
 
-load.css('menu.css', function() {
+load.css('menu.css', function(error) {
     /* load menu css and then do some magic */
 });
 
 /* recognition file type by extension */
-load('css-or-.js', function() {
-    console.log('done');
+load('css-or-.js', function(error, event) {
+    console.log(error || event);
 });
 
 load('template/footer.html', function(error, footer) {
