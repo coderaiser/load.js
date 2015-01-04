@@ -9,6 +9,8 @@ Create `html` page with `js` connected.
 <script src="load.min.js"></script>
 ```
 
+Than try one of this:
+
 ```js
 load.js('jquery.js', function(error) {
     /* you could use jquery functions here */
