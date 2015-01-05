@@ -2,7 +2,13 @@
 
 Dynamically loading external JavaScript and CSS files 
 
-##How use?
+## Install
+
+```
+bower install load
+```
+
+## How use?
 Create `html` page with `js` connected.
 
 ```html
