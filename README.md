@@ -50,7 +50,7 @@ load.series([
 ], function() {
 });
 
-/* load all togeter and call callback */
+/* load all together and call callback */
 load.parallel([
     'menu.css',
     'menu.js',
