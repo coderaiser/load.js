@@ -108,18 +108,24 @@
             if (!url)
                 callback();
             else
-                load(url, function() {
-                    load.series(urls, callback);
+                load(url, function(error) {
+                    if (error)
+                        callback(error);
+                    else
+                        load.series(urls, callback);
                 });
         };
         
         load.parallel = function(urls, callback) {
             var i       = urls.length,
-                func    = function() {
+                func    = function(error) {
                     --i;
                     
+                    if (error)
+                        i = 0;
+                    
                     if (!i)
-                        callback();
+                        callback(error);
                 };
                 
             urls.forEach(function(url) {
