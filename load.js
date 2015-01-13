@@ -98,7 +98,7 @@
                 if (!error)
                     json = JSON.parse(data);
                 
-                callback(error, json || data);
+                callback(error, json);
             });
         };
         
