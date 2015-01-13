@@ -158,11 +158,8 @@
                 
                 num    = src.lastIndexOf('/') + 1;
                 sub    = src.substr(src, num);
-                id     = src.replace(sub, '');
-                
-                /* убираем точки */
-                while (id.indexOf('.') > 0)
-                    id = id.replace('.', '-');
+                id     = src.replace(sub, '')
+                            .replace(/\./g, '-');
             }
             
             return id;
