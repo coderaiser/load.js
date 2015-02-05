@@ -8,7 +8,8 @@
     "coderaiser <mnemonic.enemy@gmail.com>"
   ],
   "moduleType": [
-    "globals"
+    "globals",
+    "node"
   ],
   "keywords": [
     "load"
