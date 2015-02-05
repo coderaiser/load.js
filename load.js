@@ -2,9 +2,9 @@
     'use strict';
     
     if (typeof module !== 'undefined' && module.exports)
-        module.exports = new LoadProto();
+        module.exports  = new LoadProto();
     else
-        global.load = new LoadProto();
+        global.load     = new LoadProto();
     
     function LoadProto() {
         function load(src, callback) {
