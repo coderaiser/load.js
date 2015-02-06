@@ -1,1 +1,24 @@
-bower.json
+{
+  "name": "load.js",
+  "version": "1.1.4",
+  "description": "Dynamically loading external JavaScript and CSS files",
+  "main": "load.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coderaiser/load.js"
+  },
+  "keywords": [
+    "load",
+    "js",
+    "css"
+  ],
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (http://coderaiser.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coderaiser/load.js/issues"
+  },
+  "homepage": "https://github.com/coderaiser/load.js"
+}
