@@ -5,6 +5,12 @@ Dynamically loading external JavaScript and CSS files
 ## Install
 
 ```
+npm install load.js
+```
+
+or
+
+```
 bower install load
 ```
 
