@@ -162,7 +162,7 @@
                 num    = src.lastIndexOf('/') + 1;
                 sub    = src.substr(src, num);
                 id     = src.replace(sub, '')
-                            .replace(/\./g, '-');
+                    .replace(/\./g, '-');
             }
             
             return id;

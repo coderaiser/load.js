@@ -4,7 +4,7 @@
   "description": "Dynamically loading external JavaScript and CSS files",
   "main": "load.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint load.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/coderaiser/load.js/issues"
   },
-  "homepage": "https://github.com/coderaiser/load.js"
+  "homepage": "https://github.com/coderaiser/load.js",
+  "devDependencies": {
+    "eslint": "^4.11.0"
+  }
 }
