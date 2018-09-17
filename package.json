@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/coderaiser/load.js",
   "devDependencies": {
-    "eslint": "^4.11.0"
+    "eslint": "^5.6.0"
   }
 }
