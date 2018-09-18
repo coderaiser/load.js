@@ -8,44 +8,32 @@ Dynamically loading external JavaScript and CSS files
 npm install load.js
 ```
 
-or
-
-```
-bower install load
-```
-
 ## How use?
-Create `html` page with `js` connected.
-
-```html
-<script src="load.min.js"></script>
-```
-
-Than try one of this:
-
 ```js
-load.js('jquery.js', function(error) {
+const load = require('load');
+
+load.js('jquery.js', (error) => {
     /* you could use jquery functions here */
 });
 
-load.css('menu.css', function(error) {
+load.css('menu.css', (error) => {
     /* load menu css and then do some magic */
 });
 
 /* recognition file type by extension */
-load('css-or-.js', function(error, event) {
+load('css-or-.js', (error, event) => {
     console.log(error || event);
 });
 
-load('template/footer.html', function(error, footer) {
+load('template/footer.html', (error, footer) => {
     console.log(error || footer);
 });
 
-load.json('config.json', function(error, config) {
+load.json('config.json', (error, config) => {
     console.log(error || config);
 });
 
-load.ajax('template/header.html', function(error, header) {
+load.ajax('template/header.html', (error, header) => {
     console.log(error || header);
 });
 
@@ -53,14 +41,14 @@ load.ajax('template/header.html', function(error, header) {
 load.series([
     'jquery.js',
     'jq-console.js',
-], function(error) {
+], (error) => {
 });
 
 /* load all together and call callback */
 load.parallel([
     'menu.css',
     'menu.js',
-], function(error) {
+], (error) => {
 });
 ```
 
