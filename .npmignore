@@ -1,2 +1,6 @@
-bower.json
+legacy
+test
+
+yarn-error.log
+.*
 
