@@ -1,6 +1,6 @@
 {
   "name": "load.js",
-  "version": "1.1.5",
+  "version": "2.0.0",
   "description": "Dynamically loading external JavaScript and CSS files",
   "main": "legacy/load.js",
   "scripts": {
