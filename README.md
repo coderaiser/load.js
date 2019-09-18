@@ -12,44 +12,32 @@ npm install load.js
 ```js
 const load = require('load');
 
-load.js('jquery.js', (error) => {
-    /* you could use jquery functions here */
-});
+/* you could use jquery functions here */
+await load.js('jquery.js');
 
-load.css('menu.css', (error) => {
-    /* load menu css and then do some magic */
-});
+/* load menu css and then do some magic */
+await load.css('menu.css');
 
 /* recognition file type by extension */
-load('css-or-.js', (error, event) => {
-    console.log(error || event);
-});
+const [e, event] = await tryToCatch(load, 'css-or-.js');
 
-load('template/footer.html', (error, footer) => {
-    console.log(error || footer);
-});
+const [e, footer] = await tryToCatch(load, 'template/footer.html');
 
-load.json('config.json', (error, config) => {
-    console.log(error || config);
-});
+const [e, config] = await tryToCatch(load.json, 'config.json');
 
-load.ajax('template/header.html', (error, header) => {
-    console.log(error || header);
-});
+const [e, header] = await tryToCatch(load.ajax, 'template/header.html');
 
 /* load one-by-one */
-load.series([
+await load.series([
     'jquery.js',
     'jq-console.js',
-], (error) => {
-});
+]);
 
 /* load all together and call callback */
-load.parallel([
+await load.parallel([
     'menu.css',
     'menu.js',
-], (error) => {
-});
+]);
 ```
 
 ## License

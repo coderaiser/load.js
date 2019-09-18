@@ -2,7 +2,7 @@
   "name": "load.js",
   "version": "2.0.1",
   "description": "Dynamically loading external JavaScript and CSS files",
-  "main": "legacy/load.js",
+  "main": "lib/load.js",
   "scripts": {
     "lint": "eslint lib",
     "build": "redrun clean 6to5 legacy:*",
@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@cloudcmd/create-element": "^1.0.0",
-    "emitify": "^3.1.0"
+    "emitify": "^3.1.0",
+    "es6-promisify": "^6.0.2"
   }
 }
