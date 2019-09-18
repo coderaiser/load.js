@@ -4,16 +4,11 @@
   "description": "Dynamically loading external JavaScript and CSS files",
   "main": "lib/load.js",
   "scripts": {
-    "lint": "eslint lib",
-    "build": "redrun clean 6to5 legacy:*",
-    "6to5": "babel -d legacy lib",
-    "wisdom": "npm run build",
-    "clean": "rimraf legacy/*",
-    "watcher": "nodemon -w test -w lib --exec",
-    "watch:test": "npm run watcher -- npm test",
-    "watch:build": "npm run watcher -- npm run 6to5",
-    "watch:lint": "npm run watcher -- 'npm run lint'",
-    "legacy:index": "echo \"module.exports = require('./load');\" > legacy/index.js"
+    "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint",
+    "watcher": "madrun watcher",
+    "watch:test": "madrun watch:test",
+    "watch:lint": "madrun watch:lint"
   },
   "repository": {
     "type": "git",
@@ -31,16 +26,16 @@
   },
   "homepage": "https://github.com/coderaiser/load.js",
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.1",
-    "@babel/preset-env": "^7.0.0",
     "eslint": "^5.6.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-putout": "^2.0.0",
+    "madrun": "^3.0.5",
     "nodemon": "^1.18.4",
-    "nyc": "^13.0.1"
+    "nyc": "^13.0.1",
+    "putout": "^6.0.0"
   },
   "dependencies": {
     "@cloudcmd/create-element": "^1.0.0",
-    "emitify": "^3.1.0",
     "es6-promisify": "^6.0.2"
   }
 }
