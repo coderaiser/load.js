@@ -36,6 +36,6 @@
   },
   "dependencies": {
     "@cloudcmd/create-element": "^2.0.0",
-    "es6-promisify": "^6.0.2"
+    "zames": "^3.0.0"
   }
 }
