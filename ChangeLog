@@ -1,3 +1,9 @@
+2019.09.24, v3.1.2
+
+feature:
+- (load.js) promisify -> async
+
+
 2019.09.24, v3.1.1
 
 fix:
