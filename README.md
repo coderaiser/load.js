@@ -19,13 +19,13 @@ await load.js('jquery.js');
 await load.css('menu.css');
 
 /* recognition file type by extension */
-const [e, event] = await tryToCatch(load, 'css-or-.js');
+const [e1, event] = await tryToCatch(load, 'css-or-.js');
 
-const [e, footer] = await tryToCatch(load, 'template/footer.html');
+const [e2, footer] = await tryToCatch(load, 'template/footer.html');
 
-const [e, config] = await tryToCatch(load.json, 'config.json');
+const [e3, config] = await tryToCatch(load.json, 'config.json');
 
-const [e, header] = await tryToCatch(load.ajax, 'template/header.html');
+const [e4, header] = await tryToCatch(load.ajax, 'template/header.html');
 
 /* load one-by-one */
 await load.series([
@@ -33,7 +33,7 @@ await load.series([
     'jq-console.js',
 ]);
 
-/* load all together and call callback */
+/* load all together */
 await load.parallel([
     'menu.css',
     'menu.js',
